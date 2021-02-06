@@ -26,12 +26,12 @@ const AdminSection = () => {
         });
     }
 
-    const getEvents = () => {
-        Axios.get('http://localhost:3001/getevents').then((response) => {
-            setEventList(response.data);
-            console.log(response);
-        });
-    }
+    // const getEvents = () => {
+    //     Axios.get('http://localhost:3001/getevents').then((response) => {
+    //         setEventList(response.data);
+    //         console.log(response);
+    //     });
+    // }
     
     Axios.get('http://localhost:3001/getevents').then((response) => {
             setEventList(response.data);
