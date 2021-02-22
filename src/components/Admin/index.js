@@ -39,7 +39,7 @@ const AdminSection = () => {
     });
 
     return (
-        <AdminContainer>
+        <AdminContainer className="admin-container">
             <AdminH1>Admin Page</AdminH1>
             <AdminWrapper>
                 <AdminForm>
