@@ -45,7 +45,7 @@ const EventsSection = () => {
         <EventsContainer className="event-container">
             <EventsH1 className="event-title">Our Events</EventsH1>
             <div>
-                {/* <Carousel
+                <Carousel
                     ref={(el) => {
                         carousel = el;
                     }}
@@ -58,14 +58,14 @@ const EventsSection = () => {
                         if (currentPageIndex == 2) {
                             hideRightArrow();
 
-                            if (carousel) {
-                                setTimeout(() => {
+                            setTimeout(() => {
+                                if (carousel) {
                                     carousel.goTo(0);
                                     showRightArrow();
                                     hideLeftArrow();
-                                }, autoPlaySpeed);
-                            }
-                            
+                                }
+                            }, autoPlaySpeed);
+
                             showLeftArrow();
                         }
                     }}
@@ -83,7 +83,7 @@ const EventsSection = () => {
                             </div>
                         );
                     })}
-                </Carousel> */}
+                </Carousel>
                 <EventsVideo
                     className="dummy"
                     autoPlay

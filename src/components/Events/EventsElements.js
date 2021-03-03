@@ -7,7 +7,11 @@ export const EventsContainer = styled.div`
     align-items: center;
     background: white;
     width: 100%;
-    height: 600px;
+    height: 675px;
+
+    @media screen and (max-width: 480px) {
+        height: 450px
+    }
 `
 
 export const EventsH1 = styled.h1`
@@ -15,6 +19,10 @@ export const EventsH1 = styled.h1`
     color: #EF476F;
     font-size: 30px;
     text-align: center;
+
+    @media screen and (max-width: 480px) {
+        font-size: 20px;
+    }
 `
 
 export const EventsWrapper = styled.div`
