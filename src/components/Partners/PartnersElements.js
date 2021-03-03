@@ -1,23 +1,20 @@
 import styled from 'styled-components';
 
 export const PartnersContainer = styled.div`
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #EDF6F9;
     width: 100%;
-    // background: #FFD166;
 `
 
-export const PartnersWrapper = styled.div`
-    // max-width: 1000px;
+export const PartnersWrapper = styled.div`;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 48px;
 `
 
 export const MemberCard = styled.div`
@@ -59,8 +56,8 @@ export const MemberPhoto = styled.img`
     }
 
     @media screen and (max-width: 400px) {
-        height: 160px;
-        width: 120px;
+        height: 240px;
+        width: 200px;
         min-width: 90px;
     }
 `

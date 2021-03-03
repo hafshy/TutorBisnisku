@@ -4,7 +4,11 @@ export const LandingContainer = styled.div`
     color: #fff;
     background: #EDF6F9;
     padding: 30px 0;
-    height: 420px;
+    height: 100%;
+
+    @media screen and (min-width: 1600px) {
+        height: 650px;
+    }
 
     @media screen and (max-width: 768px) {
         padding: 64px 0;
@@ -14,6 +18,8 @@ export const LandingContainer = styled.div`
     @media screen and (max-width: 480px) {
         height: 500px;
     }
+
+    
 `
 
 export const LandingWrapper = styled.div`

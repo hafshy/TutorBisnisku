@@ -4,6 +4,7 @@ import Wolo from '../../images/wolo.png';
 import Nabila from '../../images/nabila.png';
 import Chelsea from '../../images/chelsea.png';
 import Kemal from '../../images/kemal.jpg';
+import { Button } from '../ButtonElement';
 
 const PartnersSection = () => {
     return (
@@ -39,6 +40,9 @@ const PartnersSection = () => {
                     </MemberContent>
                 </MemberCard>
             </PartnersWrapper>
+            <Button href=" https://wa.me/message/WHABKDM5XLPME1" target="_blank" style={{marginBottom: "60px"}}>
+                Contact Us
+            </Button>
         </PartnersContainer>
     )
 }

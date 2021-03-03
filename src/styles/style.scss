@@ -1,0 +1,92 @@
+// For event home
+* {
+    transition: all .4s;
+}
+
+.rec-dot {
+    display: none;
+}
+
+.rec-arrow {
+    box-shadow: none !important;
+    background-color: transparent !important;
+    color: #EF476F !important;
+}
+
+.video-container:focus {
+    outline: none !important;
+    border: none !important;
+}
+
+.rec-arrow-left {
+    left: -5%;
+}
+
+.rec-arrow-right {
+    right: -5%;
+}
+
+.rec-arrow:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.dummy {
+    opacity: 0;
+    height: 0;
+}
+
+.rec-slider-container:hover {
+    transform: scale(1.02);
+}
+
+video {
+    // box-shadow: 4px 4px 16px -1px rgba(0,0,0, .5);
+}
+
+.carousel-item {
+    position: absolute;
+    z-index: 3;
+}
+
+
+.video-container {
+    width: 90% !important;
+
+    @media screen and (max-width: 768px) {
+        width: 75% !important;
+    }
+
+    video {
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+
+.carousel-next::before {
+    background-image: none !important;
+    content: '>' !important;
+    position: absolute;
+    color: white !important;
+}
+
+h3 {
+    text-align: center;
+}
+
+.carousel-item {
+    opacity: 0;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.event-title + div {
+    min-width: 750px;
+}

@@ -7,8 +7,10 @@ import Landing from '../components/Landing'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import Who from '../components/WhoSection'
+import Event from '../components/Events'
 import { motion } from 'framer-motion'
 import {animationOne, transition} from '../animations'
+import '../styles/style.scss'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -26,6 +28,7 @@ const Home = () => {
             <Landing />
             <Who />
             <HeroSection />
+            <Event />
             <Activity />
             <Consult />
             <Footer />
