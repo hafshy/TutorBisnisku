@@ -19,7 +19,7 @@ const Footer = () => {
                         </FooterLinkItems>
                         <FooterLinkItems>
                             <FooterLinkTitle>Social Media</FooterLinkTitle>
-                                <FooterLinkSocmed href=" https://wa.me/message/WHABKDM5XLPME1" target="_blank" aria-label="Whatsapp">Whatsapp</FooterLinkSocmed>
+                                <FooterLinkSocmed href="https://wa.me/message/WHABKDM5XLPME1" target="_blank" aria-label="Whatsapp">Whatsapp</FooterLinkSocmed>
                                 <FooterLinkSocmed href="https://instagram.com/tutorbisnisku.id" target="_blank" aria-label="Instagram">Instagram</FooterLinkSocmed>
                                 <FooterLinkSocmed to="/">Linkedin</FooterLinkSocmed>
                         </FooterLinkItems>

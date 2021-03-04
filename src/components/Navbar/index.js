@@ -41,7 +41,7 @@ const Navbar = ({toggle, home}) => {
                             <NavLinks to="faq">FAQ</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="events">Events</NavLinks>
+                            <NavLinks to="video">Video</NavLinks>
                         </NavItem>
                     </NavMenu>
                 </NavbarContainer>

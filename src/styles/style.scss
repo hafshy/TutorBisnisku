@@ -1,9 +1,10 @@
 // For event home
 * {
-    transition: all .4s;
+    transition: all 0.4s;
 }
 
-html, body {
+html,
+body {
     overflow-x: hidden;
 }
 
@@ -14,14 +15,15 @@ html, body {
 .rec-arrow {
     box-shadow: none !important;
     background-color: transparent !important;
-    color: #EF476F !important;
+    color: #ef476f !important;
 
     @media screen and (max-width: 480px) {
         display: none;
     }
 }
 
-.video-container:focus, .video-container:active {
+.video-container:focus,
+.video-container:active {
     outline: none !important;
     border: none !important;
 }
@@ -57,7 +59,6 @@ video {
     z-index: 3;
 }
 
-
 .video-container {
     @media screen and (max-width: 768px) {
         width: 90% !important;
@@ -71,7 +72,7 @@ video {
 
 .carousel-next::before {
     background-image: none !important;
-    content: '>' !important;
+    content: ">" !important;
     position: absolute;
     color: white !important;
 }
@@ -94,15 +95,15 @@ h3 {
 }
 
 .event-title + div {
-   width: 80%;
+    width: 80%;
 
-   @media screen and (min-width: 1200px) {
-       width: 50%;
-   }
+    @media screen and (min-width: 1200px) {
+        width: 60%;
+    }
 
-   @media screen and (max-width: 480px) {
-       width: 90%;
-   }
+    @media screen and (max-width: 480px) {
+        width: 90%;
+    }
 }
 
 .rec-carousel-item-hidden {
@@ -111,4 +112,123 @@ h3 {
 
 .rec-carousel-item-visible {
     opacity: 1 !important;
+}
+
+.video-section {
+    padding: 5%;
+
+    h1 {
+        text-align: center;
+        color: #ef476f;
+        font-size: 32px;
+        margin-bottom: 60px;
+
+        @media screen and (max-width: 480px) {
+            margin: 30px auto !important;
+            font-size: 24px;
+        }
+    }
+
+    .video-wrapper {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-bottom: 200px;
+
+        @media (max-width: 480px) {
+            margin-bottom: 100px;
+        }
+        // flex-flow: row wrap;
+
+        .video-container {
+            width: 100%;
+            padding: 20px 40px;
+            min-width: 320px;
+        }
+
+        .desc-container {
+            width: 100%;
+            padding: 20px;
+            margin: 0 0 0 1.6vw;
+            min-width: 340px;
+
+            .text {
+                font-size: 1.6vw;
+                line-height: 1.7;
+                margin-bottom: 2vw;
+            }
+
+            a {
+                display: inline-block;
+                font-size: 1.8vw;
+                padding: 12px 24px;
+                border-radius: 40px;
+                text-decoration: none;
+                color: white;
+                background-color: #06d6a0;
+            }
+        }
+    }
+}
+
+
+.reverse {
+    .desc-container {
+        text-align: right !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .video-wrapper {
+        flex-wrap: wrap;
+        text-align: center !important;
+
+        .video-container {
+            margin: 0 auto;
+        }
+
+        .desc-container {
+            margin-left: 0 !important;
+
+            .text {
+                font-size: 18px !important;
+            }
+
+            a {
+                font-size: 20px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .video-wrapper {
+        .desc-container {
+            margin-left: 0 !important;
+
+            .text {
+                font-size: 12px !important;
+            }
+
+            a {
+                font-size: 16px !important;
+                padding: 8px 16px !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reverse {
+        flex-wrap: wrap-reverse !important;
+
+        .desc-container {
+            text-align: center !important;
+        }
+    }
+}
+
+video:active, video:focus {
+    outline: none !important;
 }

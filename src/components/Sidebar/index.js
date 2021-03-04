@@ -30,6 +30,9 @@ const Sidebar = ({isOpen, toggle, home}) => {
                         <SidebarLink to="faq" onClick={toggle}>
                             FAQ
                         </SidebarLink>
+                        <SidebarLink to="video" onClick={toggle}>
+                            Video
+                        </SidebarLink>
                     </SidebarMenu>
                 </SidebarWrapper>
             </SidebarContainer>

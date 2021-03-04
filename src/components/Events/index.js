@@ -14,7 +14,6 @@ import {
     EventsDescription,
     EventsVideo,
 } from "./EventsElements";
-import Slider from "infinite-react-carousel";
 
 const EventsSection = () => {
     let carousel = useRef(null);
