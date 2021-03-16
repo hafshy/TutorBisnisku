@@ -1,12 +1,11 @@
 import React from 'react';
 import { WhoContainer, VideoContainer, VideoBg, TextContainer, TextH1, TextP } from './WhoElements';
-import Video from '../../videos/video.mp4';
 
 const Who = () => {
     return (
         <WhoContainer>
             <VideoContainer>
-                <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
+                <VideoBg autoPlay loop muted src={`${process.env.PUBLIC_URL}/videos/video.mp4`} type='video/mp4' />
             </VideoContainer>
             <TextContainer>
                 <TextH1>Who Are We?</TextH1>

@@ -5,10 +5,12 @@ import Home from './pages';
 import FAQPage from './pages/faq';
 import Partners from './pages/partners';
 import Video from './pages/video';
+import OnlineClass from './pages/onlineclass';
 import ScrollToTop from './components/ScrollToTop';
 import { AnimatePresence } from 'framer-motion';
 import AOS from "aos";
 import 'aos/dist/aos.css';
+import Consult from './pages/consult';
 
 function App() {
   useEffect(() => {
@@ -28,6 +30,8 @@ function App() {
           <Route path="/faq" component={FAQPage} exact />
           <Route path="/partners" component={Partners} exact />
           <Route path="/video" component={Video} exact />
+          <Route path="/online-class" component={OnlineClass} exact />
+          <Route path="/consult" component={Consult} exact />
         </Switch>
       </AnimatePresence>
     </Router>

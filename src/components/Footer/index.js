@@ -1,7 +1,6 @@
 import React from 'react';
 import { FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights, SocialIcons, SocialIconLink, SocialLogoImg, FooterLinkSocmed } from './FooterElements';
-import Logo from '../../images/logo.png';
 
 const Footer = () => {
 
@@ -28,7 +27,7 @@ const Footer = () => {
                 <SocialMedia>
                     <SocialMediaWrap>
                         <SocialLogo to='/'>
-                            <SocialLogoImg src={Logo} />
+                            <SocialLogoImg src={`${process.env.PUBLIC_URL}/images/logo.png`} />
                         </SocialLogo>
                         <WebsiteRights>
                             TutorBisnisku © {new Date().getFullYear()} All rights reserved

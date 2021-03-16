@@ -5,14 +5,13 @@ import { Link as LinkS } from 'react-scroll';
 export const Nav = styled.nav`
     background: #101522;
     height: 80px;
-    // margin-top: -80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
@@ -23,7 +22,7 @@ export const NavbarContainer = styled.div`
     display: flex;
     justify-content: space-between;
     height: 80px;
-    z-index: 1;
+    z-index: 100;
     width: 100%;
     padding: 0 24px;
     max-width: 1100px;
@@ -70,7 +69,7 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-styles: none;
     text-align: center;
-    margin-right: -22px;
+    z-index: 10;
 
     @media screen and (max-width: 760px) {
         display: none;
@@ -79,6 +78,10 @@ export const NavMenu = styled.ul`
 
 export const NavItem = styled.li`
     height: 80px;
+
+    & a:hover {
+        color: #EF476F;
+    }
 `
 
 export const NavLinks = styled(LinkR)`
@@ -103,4 +106,8 @@ export const NavLinksS = styled(LinkS)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+
+    &:hover {
+        color: #EF476F;
+    }
 `

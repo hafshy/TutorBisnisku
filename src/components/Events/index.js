@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
-import Video from "../../videos/video.mp4";
+
 import {
     EventsContainer,
     EventsH1,
@@ -44,7 +44,7 @@ const EventsSection = () => {
         <EventsContainer className="event-container">
             <EventsH1 className="event-title">Our Events</EventsH1>
             <div>
-                <Carousel
+                {/* <Carousel
                     ref={(el) => {
                         carousel = el;
                     }}
@@ -70,25 +70,25 @@ const EventsSection = () => {
                     }}
                 >
                     {[1, 2, 3].map((item, index) => {
-                        return (
-                            <div key={index} className="video-container">
+                        return ( */}
                                 <EventsVideo
                                     autoPlay
                                     loop
                                     muted
-                                    src={Video}
+                                    className="video-tutorbisnisku"
+                                    src={`${process.env.PUBLIC_URL}/videos/TutorBisnisku Video - Celsi.mp4`}
                                     type="video/mp4"
                                 />
-                            </div>
+                            {/* </div>
                         );
                     })}
-                </Carousel>
+                </Carousel> */}
                 <EventsVideo
                     className="dummy"
                     autoPlay
                     loop
                     muted
-                    src={Video}
+                    src={`${process.env.PUBLIC_URL}/videos/video.mp4`}
                     type="video/mp4"
                 />
             </div>

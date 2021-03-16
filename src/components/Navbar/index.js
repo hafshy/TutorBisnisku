@@ -1,38 +1,67 @@
-import React from 'react';
-import { FaBars } from 'react-icons/fa';
-import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks, NavLinksS, NavLogoImg } from './NavbarElements';
-import { animateScroll as scroll } from 'react-scroll';
-import Logo from '../../images/logo.png';
+import React, { useState } from "react";
+import { FaBars } from "react-icons/fa";
+import {
+    Nav,
+    NavbarContainer,
+    NavLogo,
+    MobileIcon,
+    NavMenu,
+    NavItem,
+    NavLinks,
+    NavLinksS,
+    NavLogoImg,
+} from "./NavbarElements";
+import { animateScroll as scroll } from "react-scroll";
+import { useHistory } from "react-router-dom";
 
-
-const Navbar = ({toggle, home}) => {
-    let apply;
-    if (home) {
-        apply = <NavLinksS to="apply" smooth={true} duration={500} spy={true} exact='true' offset={-80}>How We Can Help</NavLinksS>;
-    } else {
-        apply = <NavLinks to="/">How We Can Help</NavLinks>;
-    }
+const Navbar = ({ toggle, home }) => {
+    const history = useHistory();
 
     const toggleHome = () => {
-        scroll.scrollToTop()
-    }
-    
+        scroll.scrollToTop();
+    };
+
+    const [open, setOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setOpen(!open);
+    };
+
     return (
         <>
             <Nav>
                 <NavbarContainer>
                     <NavLogo to="/" onClick={toggleHome}>
-                        <NavLogoImg src={Logo}/>
+                        <NavLogoImg src={`${process.env.PUBLIC_URL}/images/logo.png`} />
                     </NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks to="/" onClick={toggleHome}>Home</NavLinks>
+                            <NavLinks to="/" onClick={toggleHome}>
+                                Home
+                            </NavLinks>
                         </NavItem>
                         <NavItem>
-                            {apply}
+                            <NavLinksS onClick={toggleDropdown}>
+                                How We Can Help
+                            </NavLinksS>
+                            <div
+                                className={
+                                    open ? "dropdown active" : "dropdown"
+                                }
+                            >
+                                <div className="dropdown-content" onClick={() => history.push("/online-class")}>
+                                    <a>Online Class</a>
+                                </div>
+                                <div
+                                    onClick={() => history.push("/consult")}
+                                    className="dropdown-content"
+                                >
+                                    <a>Consult</a>
+                                </div>
+                            </div>
                         </NavItem>
                         <NavItem>
                             <NavLinks to="partners">Partners</NavLinks>
@@ -47,7 +76,7 @@ const Navbar = ({toggle, home}) => {
                 </NavbarContainer>
             </Nav>
         </>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

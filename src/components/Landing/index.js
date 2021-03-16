@@ -1,6 +1,5 @@
 import React from 'react'
 import { Column2, ImgWrap, LandingContainer, LandingWrapper, LandingRow, Column1, TextWrapper, Subtitle, Img } from './LandingElements'
-import svg1 from '../../images/svg-1.svg';
 
 const Landing = () => {
     return (
@@ -17,7 +16,7 @@ const Landing = () => {
                         </Column1>
                         <Column2>
                             <ImgWrap>
-                                <Img src={svg1}/>
+                                <Img src={`${process.env.PUBLIC_URL}/images/svg-1.svg`}/>
                             </ImgWrap>
                         </Column2>
                     </LandingRow>

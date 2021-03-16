@@ -2,14 +2,8 @@ import React from 'react';
 import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SidebarLinkS } from './SidebarElements';
 import { animateScroll as scroll } from 'react-scroll';
 
-const Sidebar = ({isOpen, toggle, home}) => {
-    let apply;
-    if (home) {
-        apply = <SidebarLinkS to="apply" onClick={toggle} smooth={true} duration={500} spy={true} exact='true' offset={-80}>How We Can Help</SidebarLinkS>;
-    } else {
-        apply = <SidebarLink to="/" onClick={toggle}>How We Can Help</SidebarLink>;
-    }
-
+const Sidebar = ({isOpen, toggle}) => {
+    
     const toggleHome = () => {
         scroll.scrollToTop()
     }
@@ -22,8 +16,9 @@ const Sidebar = ({isOpen, toggle, home}) => {
                 </Icon>
                 <SidebarWrapper>
                     <SidebarMenu>
-                    <SidebarLink to="/" onClick={toggleHome}>Home</SidebarLink>
-                        {apply}
+                        <SidebarLink to="/" onClick={toggleHome}>Home</SidebarLink>
+                        <SidebarLink to="/online-class" onClick={toggle}>Online Class</SidebarLink>
+                        <SidebarLink to="/consult" onClick={toggle}>Consult</SidebarLink>
                         <SidebarLink to="partners" onClick={toggle}>
                             Partners
                         </SidebarLink>
